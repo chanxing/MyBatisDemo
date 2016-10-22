@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.mb.config.UserDao">
+	<insert id="insert" parameterType="com.mb.config.User">
+		insert into user(user_name) values(#{userName})
+	</insert>
+	<select id="selectAll" resultType="com.mb.config.User">
+		select user_id AS userId,user_name AS userName from user order by user_id ASC
+	</select>
+</mapper>
